@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <div>
+            <form action="https://sample-devise-omniauth.herokuapp.com/users/auth/github" method="POST">
+                <input type="submit" value="Log in with Github" />
+            </form>
+        <form>
+            <label htmlFor="email">email:</label>
+            <br/>
+            <input type="text" id="email" name="email" value="a@gmail.com" />
+                <br />
+            <label htmlFor="password">password:</label>
+            <br />
+            <input type="text" id="password" name="password" value="123456" />
+            <br/>
+            <input type="submit" value="Submit" />
+        </form>
+        </div>
+    )
 }
 
 export default App;
