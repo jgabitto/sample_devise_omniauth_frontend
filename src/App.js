@@ -10,6 +10,7 @@ const App = () => {
     return (
         <div>
             <form action="https://sample-devise-omniauth.herokuapp.com/users/auth/github" method="POST">
+                <input type="hidden" name="authenticity_token" value="csrfToken" />
                 <input type="submit" value="Log in with Github" />
             </form>
             <a href="https://sample-devise-omniauth.herokuapp.com/users/auth/github">GET Log in with Github</a>
