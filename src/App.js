@@ -1,11 +1,18 @@
 import React from 'react';
 
 const App = () => {
+    const handleSubmit = async () => {
+        const data = await fetch("https://sample-devise-omniauth.herokuapp.com/users/auth/github");
+        const res = data.json();
+        console.log(res);
+    }
+
     return (
         <div>
             <form action="https://sample-devise-omniauth.herokuapp.com/users/auth/github" method="POST">
                 <input type="submit" value="Log in with Github" />
             </form>
+            <a href="https://sample-devise-omniauth.herokuapp.com/users/auth/github">GET Log in with Github</a>
         <form>
             <label htmlFor="email">email:</label>
             <br/>
