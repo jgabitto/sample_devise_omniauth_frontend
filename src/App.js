@@ -1,7 +1,8 @@
 import React from 'react';
 
 const App = () => {
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const data = await fetch("https://sample-devise-omniauth.herokuapp.com/users/auth/github", {
             method: 'POST'
         });
