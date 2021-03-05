@@ -1,21 +1,21 @@
 import React from 'react';
 
 const App = () => {
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const data = await fetch("https://sample-devise-omniauth.herokuapp.com/users/auth/github", {
-            method: 'POST'
+    const handleSubmit = async () => {
+        // e.preventDefault();
+        const data = await fetch(`https://github.com/login/oauth/authorize?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}`, {
+            mode: 'cors'
         });
-        const res = data.json();
+        const res = await data.json();
         console.log(res);
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}> */}
                 {/* <input type="hidden" name="authenticity_token" value="csrfToken" /> */}
-                <input type="submit" value="Log in with Github" />
-            </form>
+                <button type="button" onClick={handleSubmit}>Login with Github</button>
+            {/* </form> */}
             <a href="https://sample-devise-omniauth.herokuapp.com/users/auth/github">GET Log in with Github</a>
         <form>
             <label htmlFor="email">email:</label>
