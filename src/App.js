@@ -3,8 +3,13 @@ import React from 'react';
 const App = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const data = await fetch(`https://github.com/login/oauth/authorize?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}`, {
-            mode: 'cors'
+        // const data = await fetch(`https://github.com/login/oauth/authorize?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}`, {
+        //     mode: 'cors'
+        // });
+        const data = await fetch('https://github.com/login/oauth/authorize', {
+            mode: 'cors',
+            client_id: process.env.REACT_APP_CLIENT_ID,
+            scope: 'user'
         });
         const res = await data.json();
         console.log(res);
