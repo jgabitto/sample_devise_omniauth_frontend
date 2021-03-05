@@ -12,7 +12,7 @@ const App = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}> */}
+            <form onSubmit={handleSubmit}>
                  {/* <input type="hidden" name="authenticity_token" value="csrfToken" /> */}
                  <button type="button" onClick={handleSubmit}>Login with Github</button>
             </form>
