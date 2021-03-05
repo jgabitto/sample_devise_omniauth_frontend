@@ -17,10 +17,10 @@ const App = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}> */}
                  {/* <input type="hidden" name="authenticity_token" value="csrfToken" /> */}
                  <button type="button" onClick={handleSubmit}>Login with Github</button>
-            </form>
+            {/* </form> */}
             <a href="https://sample-devise-omniauth.herokuapp.com/users/auth/github">GET Log in with Github</a>
             <br/>
             <a href={`https://github.com/login/oauth/authorize?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}`}>Working Log in with Github</a>
