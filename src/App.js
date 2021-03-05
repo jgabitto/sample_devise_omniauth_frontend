@@ -9,10 +9,10 @@ const App = () => {
         const data = await fetch('https://github.com/login/oauth/authorize', {
             mode: 'cors',
             method: 'POST',
-            body: {
+            body: JSON.stringify({
                 client_id: process.env.REACT_APP_CLIENT_ID,
                 scope: "user"
-            }
+            })
         });
         const res = await data.json();
         console.log(res);
