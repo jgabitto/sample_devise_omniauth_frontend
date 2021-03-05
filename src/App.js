@@ -18,7 +18,7 @@ const App = () => {
             {/* </form> */}
             <a href="https://sample-devise-omniauth.herokuapp.com/users/auth/github">GET Log in with Github</a>
             <br/>
-            <a href={`https://github.com/login/oauth/authorize?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}`}>Working Log in with Github</a>
+            <a href={`https://github.com/login/oauth/authorize?scope=user&client_id=${process.env.REACT_APP_CLIENT_ID}`}>Working Log in with Github</a>
         <form>
             <label htmlFor="email">email:</label>
             <br/>
